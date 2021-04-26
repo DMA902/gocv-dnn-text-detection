@@ -1,2 +1,2 @@
-# gocv-dnn-text-detection
-gocv implementation of the opencv text detection example
+# GoCV DNN Text Detection
+GoCV implementation of the Opencv text detection example
