@@ -13,6 +13,8 @@ In order to run the example, the following must be installed:
 
 Instructions to install these two dependencies can be found [here](https://gocv.io/getting-started/)
 
+The EAST Text Detection Model and the Text Recognition Model must be downloaded via the links in the Resources section below.
+
 ## How to Run
 
 Specify a file in the `input` if you wish to perform text detection against a static image.
