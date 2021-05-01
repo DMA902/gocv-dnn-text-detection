@@ -140,7 +140,7 @@ func main() {
 
 			// get cropped image using perspective transform
 			if *ocr != "" {
-				cropped := fourPointsTransform(img, vertices)
+				cropped := fourPointsTransform(img, gocv.NewPointVectorFromPoints(vertices))
 				gocv.CvtColor(cropped, &cropped, gocv.ColorBGRToGray)
 
 				// Create a 4D blob from cropped image
@@ -203,14 +203,14 @@ func decodeText(scores gocv.Mat) string {
 	return charList.String()
 }
 
-func fourPointsTransform(frame gocv.Mat, vertices []image.Point) gocv.Mat {
+func fourPointsTransform(frame gocv.Mat, vertices gocv.PointVector) gocv.Mat {
 	outputSize := image.Pt(100, 32)
-	targetVertices := []image.Point{
+	targetVertices := gocv.NewPointVectorFromPoints([]image.Point{
 		image.Pt(0, outputSize.Y-1),
 		image.Pt(0, 0),
 		image.Pt(outputSize.X-1, 0),
 		image.Pt(outputSize.X-1, outputSize.Y-1),
-	}
+	})
 
 	result := gocv.NewMat()
 	rotationMatrix := gocv.GetPerspectiveTransform(vertices, targetVertices)
@@ -278,7 +278,7 @@ func decodeBoundingBoxes(scores gocv.Mat, geometry gocv.Mat, threshold float32) 
 			)
 
 			detections = append(detections, gocv.RotatedRect{
-				Contour: []image.Point{
+				Points: []image.Point{
 					{int(p1[0]), int(p1[1])},
 					{int(p3[0]), int(p3[1])},
 				},
