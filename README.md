@@ -26,7 +26,7 @@ to adjust the default confidence levels.
 
 ## Resources
 
-C++ Example: <https://github.com/opencv/opencv/blob/master/samples/dnn/text_detection.cpp>
-Python Example: <https://github.com/opencv/opencv/blob/master/samples/dnn/text_detection.py>
-EAST Text Detection Model: <https://github.com/argman/EAST>
-Text Recognition Model Download: <https://drive.google.com/drive/folders/1cTbQ3nuZG-EKWak6emD_s8_hHXWz7lAr?usp=sharing>
+- [OpenCV C++ Sample](https://github.com/opencv/opencv/blob/master/samples/dnn/text_detection.cpp)
+- [OpenCV Python Sample](https://github.com/opencv/opencv/blob/master/samples/dnn/text_detection.py)
+- [EAST Text Detection Model Download](https://github.com/argman/EAST)
+- [Text Recognition Model Download](https://drive.google.com/drive/folders/1cTbQ3nuZG-EKWak6emD_s8_hHXWz7lAr?usp=sharing)
