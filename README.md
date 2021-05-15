@@ -28,10 +28,10 @@ to adjust the default confidence levels.
 
 ## Sample Results
 
-When ran against the `bottle.jpg` sample image, the EAST Text Detection Model correctly identifies the text on this bottle image.
+When ran against the `bottle.jpg` sample image, the EAST Text Detection Model correctly identifies the text on this bottle.
 ![image](https://user-images.githubusercontent.com/47725056/118376282-13b02e80-b595-11eb-80a5-4ad9c97d5a91.png)
 
-It is also able to correctly identify the words `ALTO` in this image below:
+It is also able to correctly identify the words `ALTO` in this image below.
 ![image](https://user-images.githubusercontent.com/47725056/118376327-5d991480-b595-11eb-8897-dbec0a79b27e.png)
 
 ## Resources
