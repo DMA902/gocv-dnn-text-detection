@@ -104,7 +104,7 @@ func main() {
 		// Only Apply NMS when there are at least one box
 		indices := make([]int, len(boxes))
 		if len(boxes) > 0 {
-			gocv.NMSBoxes(boxes, confidences, float32(*threshold), float32(*nms), indices)
+			indices = gocv.NMSBoxes(boxes, confidences, float32(*threshold), float32(*nms))
 		}
 
 		// Resize indices to only include those that have values other than zero
